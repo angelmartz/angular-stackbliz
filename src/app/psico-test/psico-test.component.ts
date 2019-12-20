@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 
-import { Answer } from '@app/_models';
-import { PsicotestService } from '@app/_services';
+import { Answer } from '../_models';
+import { PsicotestService } from '../_services';
 
 
 

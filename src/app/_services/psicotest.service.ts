@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse } from '@angul
 import { catchError, tap, map } from 'rxjs/operators';
 import { Observable, of, throwError } from 'rxjs';
 
-import { Answer } from '@app/_models';
+import { Answer } from '../../_models';
 
 const apiUrl = "http://rhtest.test/api";
  

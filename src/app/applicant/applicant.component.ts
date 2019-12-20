@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Applicant } from '@app/_models';
-import { ApplicantService } from '@app/_services/applicant.service';
+import { Applicant } from '../_models';
+import { ApplicantService } from '../_services/applicant.service';
 
 
 @Component({

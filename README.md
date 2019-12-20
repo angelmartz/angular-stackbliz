@@ -1,3 +1,3 @@
-# angular-s54fhf
+# angular-stackblitz
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-s54fhf)

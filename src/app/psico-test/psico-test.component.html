@@ -1,0 +1,15 @@
+<div [ngClass]= "{'is-active': isLoading}" class="pageloader"><span class="title">Cargando Datos...</span></div>
+
+
+Time: {{ellapsedTime}} , grupo:
+{{ group_id }}
+
+<div class="field" *ngFor="let app of currentAnswer">
+    <span class="control">
+        <label [ngClass]= "{'is-success': temp.m == app.id, 'is-danger': temp.l == app.id}" class="is-checkbox is-large"  [attr.for]="app.id">
+            <input [attr.id]="app.id" type="checkbox" value="{{app.id}}" (click)="check($event, app.id)">
+            <span>{{ app.word }}</span>
+        </label>
+    </span>   
+</div>
+<button  (click)="next()"  [disabled]="!temp.m || !temp.l" *ngIf="group_id < 24">Siguiente</button>

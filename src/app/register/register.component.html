@@ -1,0 +1,51 @@
+    <form [formGroup]="applicantForm" (ngSubmit)="registerSubmit()">
+        <div class="field">
+            <label class="label">Nombre Completo</label>
+            <div class="control">
+            <input [ngClass]="{ 'is-danger': formControls.full_name.touched && formControls.full_name.errors }" class="input" type="text" placeholder="Ingresa tu nombre" formControlName="full_name">
+            </div>
+            <p *ngIf="formControls.full_name.touched && formControls.full_name.errors" class="help is-danger">Debes introducir tu nombre</p>
+        </div>
+
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+            <input [ngClass]="{ 'is-danger': formControls.email.touched && formControls.email.errors }" class="input" type="email" placeholder="fullstack@gmail.com" formControlName="email">
+            </div>
+            <p *ngIf="formControls.email.touched && formControls.email.errors" class="help is-danger">Debes introducir un e-mail</p>
+        </div>
+
+        <div class="field">
+            <label class="label">Puesto</label>
+            <div class="control">
+            <input [ngClass]="{ 'is-danger': formControls.job_title.touched && formControls.job_title.errors }" class="input" type="text" placeholder="Full Stack Dev" formControlName="job_title">
+            </div>
+            <p *ngIf="formControls.job_title.touched && formControls.job_title.errors" class="help is-danger">Debes introducir un puesto</p>
+        </div>
+
+        <div class="field">
+            <label class="label">Escolaridad</label>
+            <div class="control">
+            <input [ngClass]="{ 'is-danger': formControls.scholarship.touched && formControls.scholarship.errors }" class="input" type="text" placeholder="Licenciatura" formControlName="scholarship">
+            </div>
+            <p *ngIf="formControls.scholarship.touched && formControls.scholarship.errors" class="help is-danger">Debes introducir tu escolaridad</p>
+        </div>
+
+        <div class="field">
+            <label class="label">Fecha de Cumpleaños</label>
+            <div class="control">
+            <input [ngClass]="{ 'is-danger': formControls.birthday.touched && formControls.birthday.errors }" class="input" type="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" placeholder="dd/mm/aaaa" formControlName="birthday">
+            </div>
+            <p *ngIf="formControls.birthday.touched && formControls.birthday.errors" class="help is-danger">Debes introducir tu fecha de cumpleaños</p>
+        </div>
+
+
+        <div class="field">
+            <div class="control">
+            <button [disabled] = "applicantForm.invalid" class="button is-link" type="submit">Enviar</button>
+            </div>
+        </div>
+
+    </form>
+
+    
